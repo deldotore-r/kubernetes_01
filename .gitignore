@@ -1,0 +1,16 @@
+# Kubernetes/Kind específicos
+.kube/
+kubeconfig
+.kind/
+
+# Logs do sistema
+*.log
+
+# Arquivos temporários do Linux
+.DS_Store
+.swp
+*~
+
+# Se você usar algum editor como VS Code ou IntelliJ
+.vscode/
+.idea/

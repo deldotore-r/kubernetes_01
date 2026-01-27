@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: web-server
+spec:
+  replicas: 2 # Mostra que você sabe escalar horizontalmente
+  selector:
+    matchLabels:
+      app: web-server
+  template:
+    metadata:
+      labels:
+        app: web-server
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:1.25.3 # Versão específica é melhor que 'latest' (boa prática)
+        ports:
+        - containerPort: 80
+        resources: # Isso aqui demonstra conhecimento intermediário
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"

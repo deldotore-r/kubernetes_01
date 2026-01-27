@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: web-server
+  ports:
+    - protocol: TCP
+      port: 80        # Porta que o serviço expõe
+      targetPort: 80  # Porta que o container ouve
+  type: ClusterIP     # Padrão para comunicação interna
