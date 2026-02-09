@@ -1,26 +1,31 @@
 # Kubernetes Local Automation with Kind & Bash 🚀
 
-Este projeto demonstra a orquestração de microserviços em um ambiente Kubernetes local no Linux, utilizando **Kind** para o cluster e **Bash Scripts** para automação completa do ciclo de vida da infraestrutura.
+This project demonstrates microservices orchestration in a local Kubernetes environment on Linux, using **Kind** for the cluster and **Bash Scripts** for complete infrastructure lifecycle automation.
 
-## 🛠️ O que este projeto resolve?
-Configurar ambientes de desenvolvimento Kubernetes pode ser complexo. Este repositório entrega uma solução "One-Command-Setup", onde um script Bash prepara o cluster, gerencia permissões e realiza o deploy de uma aplicação Nginx com réplicas e limites de recursos.
+## 🛠️ What does this project solve?
 
-## 🧰 Stack Tecnológica
-- **SO:** Xubuntu (Linux)
+Setting up Kubernetes development environments can be complex. This repository delivers a "One-Command-Setup" solution, where a Bash script prepares the cluster, manages permissions, and deploys an Nginx application with replicas and resource limits.
+
+## 🧰 Tech Stack
+
+- **OS:** Xubuntu (Linux)
 - **Engine:** Docker
-- **Orquestrador:** Kubernetes (via Kind)
-- **Automação:** Shell Script (Bash)
+- **Orchestrator:** Kubernetes (via Kind)
+- **Automation:** Shell Script (Bash)
 
-## 🏗️ Arquitetura e Conceitos Aplicados
-- **Infrastructure as Code (IaC):** Todo o ambiente é versionável e reprodutível.
-- **Resource Management:** Configuração de `limits` e `requests` para evitar o esgotamento de memória do Host.
-- **High Availability:** Uso de 2 réplicas gerenciadas por um Deployment.
-- **Service Discovery:** Exposição da aplicação via Service (ClusterIP) com tunelamento via Port-Forward.
+## 🏗️ Architecture and Applied Concepts
 
-## 🚀 Como rodar
-1. Clone o repositório.
-2. Execute `./scripts/setup.sh`.
-3. Acesse `http://localhost:8080`.
+- **Infrastructure as Code (IaC):** The entire environment is versionable and reproducible.
+- **Resource Management:** Configuration of `limits` and `requests` to prevent Host memory exhaustion.
+- **High Availability:** Use of 2 replicas managed by a Deployment.
+- **Service Discovery:** Application exposure via Service (ClusterIP) with tunneling via Port-Forward.
+
+## 🚀 How to run
+
+1. Clone the repository.
+2. Run `./scripts/setup.sh`.
+3. Access `http://localhost:8080`.
 
 ---
-*Destaque: Este projeto foi construído focando em boas práticas de mercado, como a separação de camadas (k8s vs scripts) e limpeza de recursos (cleanup.sh).*
+
+*Highlight: This project was built focusing on industry best practices, such as layer separation (k8s vs scripts) and resource cleanup (cleanup.sh).*
